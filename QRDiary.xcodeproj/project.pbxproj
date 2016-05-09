@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FFB7082391ABA066019ECEB /* libPods-QRDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60785029EAAC9678EC3FA019 /* libPods-QRDiaryTests.a */; };
+		8CAD5FE01C727B0288609B27 /* libPods-QRDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6930BD86E92663E1ABF8C5BF /* libPods-QRDiary.a */; };
+		909B0ED76A4C5661CDCF4E11 /* libPods-QRDiaryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995232DDCD0B3ACC7C629B77 /* libPods-QRDiaryUITests.a */; };
 		E1D23A1A1CE12393003C51AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A191CE12393003C51AF /* main.m */; };
 		E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1C1CE12393003C51AF /* AppDelegate.m */; };
 		E1D23A201CE12393003C51AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1F1CE12393003C51AF /* ViewController.m */; };
@@ -16,6 +19,7 @@
 		E1D23A2B1CE12394003C51AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */; };
 		E1D23A361CE12394003C51AF /* QRDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A351CE12394003C51AF /* QRDiaryTests.m */; };
 		E1D23A411CE12394003C51AF /* QRDiaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A401CE12394003C51AF /* QRDiaryUITests.m */; };
+		E1EDA9E91CE131910077A62E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EDA9E81CE131910077A62E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BD6B87ED51812DAFC3E2C5A /* Pods-QRDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryTests/Pods-QRDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60785029EAAC9678EC3FA019 /* libPods-QRDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68831819D2FEBD0068BD1CB0 /* Pods-QRDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiary/Pods-QRDiary.release.xcconfig"; sourceTree = "<group>"; };
+		6930BD86E92663E1ABF8C5BF /* libPods-QRDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B08671A1C7BE964DD8D1788 /* Pods-QRDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiary/Pods-QRDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		7B60FE9D41108599103D364E /* Pods-QRDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryUITests/Pods-QRDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CF8E4F48A930EE54EEF68B6 /* Pods-QRDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryTests/Pods-QRDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		995232DDCD0B3ACC7C629B77 /* libPods-QRDiaryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRDiaryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A61907377789E642EC8ADF03 /* Pods-QRDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryUITests/Pods-QRDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1D23A151CE12393003C51AF /* QRDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D23A191CE12393003C51AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1D23A1B1CE12393003C51AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +66,7 @@
 		E1D23A3C1CE12394003C51AF /* QRDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D23A401CE12394003C51AF /* QRDiaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRDiaryUITests.m; sourceTree = "<group>"; };
 		E1D23A421CE12394003C51AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EDA9E81CE131910077A62E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EDA9E91CE131910077A62E /* AVFoundation.framework in Frameworks */,
+				8CAD5FE01C727B0288609B27 /* libPods-QRDiary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FFB7082391ABA066019ECEB /* libPods-QRDiaryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +91,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909B0ED76A4C5661CDCF4E11 /* libPods-QRDiaryUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014B19BE5A55B165724AB6B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B08671A1C7BE964DD8D1788 /* Pods-QRDiary.debug.xcconfig */,
+				68831819D2FEBD0068BD1CB0 /* Pods-QRDiary.release.xcconfig */,
+				1BD6B87ED51812DAFC3E2C5A /* Pods-QRDiaryTests.debug.xcconfig */,
+				8CF8E4F48A930EE54EEF68B6 /* Pods-QRDiaryTests.release.xcconfig */,
+				7B60FE9D41108599103D364E /* Pods-QRDiaryUITests.debug.xcconfig */,
+				A61907377789E642EC8ADF03 /* Pods-QRDiaryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C25BAADE8682A017562DC614 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDA9E81CE131910077A62E /* AVFoundation.framework */,
+				6930BD86E92663E1ABF8C5BF /* libPods-QRDiary.a */,
+				60785029EAAC9678EC3FA019 /* libPods-QRDiaryTests.a */,
+				995232DDCD0B3ACC7C629B77 /* libPods-QRDiaryUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1D23A0C1CE12393003C51AF = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +129,8 @@
 				E1D23A341CE12394003C51AF /* QRDiaryTests */,
 				E1D23A3F1CE12394003C51AF /* QRDiaryUITests */,
 				E1D23A161CE12393003C51AF /* Products */,
+				014B19BE5A55B165724AB6B7 /* Pods */,
+				C25BAADE8682A017562DC614 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D23A451CE12394003C51AF /* Build configuration list for PBXNativeTarget "QRDiary" */;
 			buildPhases = (
+				95038F744458BE0C788162C3 /* 📦 Check Pods Manifest.lock */,
 				E1D23A111CE12393003C51AF /* Sources */,
 				E1D23A121CE12393003C51AF /* Frameworks */,
 				E1D23A131CE12393003C51AF /* Resources */,
+				F7E47B9821C93831AFDD27CB /* 📦 Embed Pods Frameworks */,
+				F88D68C93C4FDCCE6CB312E4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D23A481CE12394003C51AF /* Build configuration list for PBXNativeTarget "QRDiaryTests" */;
 			buildPhases = (
+				6D1D904D954BEFCD8FE2F890 /* 📦 Check Pods Manifest.lock */,
 				E1D23A2D1CE12394003C51AF /* Sources */,
 				E1D23A2E1CE12394003C51AF /* Frameworks */,
 				E1D23A2F1CE12394003C51AF /* Resources */,
+				C85B9ACC3C15F9BA2E6E3117 /* 📦 Embed Pods Frameworks */,
+				423006AB02C98091CEA6ABAE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D23A4B1CE12394003C51AF /* Build configuration list for PBXNativeTarget "QRDiaryUITests" */;
 			buildPhases = (
+				E669E2FDCE33C0AC59E7EC91 /* 📦 Check Pods Manifest.lock */,
 				E1D23A381CE12394003C51AF /* Sources */,
 				E1D23A391CE12394003C51AF /* Frameworks */,
 				E1D23A3A1CE12394003C51AF /* Resources */,
+				5469F7D93D939D5C42F464AD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +319,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		423006AB02C98091CEA6ABAE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRDiaryTests/Pods-QRDiaryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5469F7D93D939D5C42F464AD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRDiaryUITests/Pods-QRDiaryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1D904D954BEFCD8FE2F890 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95038F744458BE0C788162C3 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C85B9ACC3C15F9BA2E6E3117 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRDiaryTests/Pods-QRDiaryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E669E2FDCE33C0AC59E7EC91 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7E47B9821C93831AFDD27CB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRDiary/Pods-QRDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F88D68C93C4FDCCE6CB312E4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRDiary/Pods-QRDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1D23A111CE12393003C51AF /* Sources */ = {
@@ -415,6 +590,7 @@
 		};
 		E1D23A461CE12394003C51AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B08671A1C7BE964DD8D1788 /* Pods-QRDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRDiary/Info.plist;
@@ -426,6 +602,7 @@
 		};
 		E1D23A471CE12394003C51AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68831819D2FEBD0068BD1CB0 /* Pods-QRDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRDiary/Info.plist;
@@ -437,6 +614,7 @@
 		};
 		E1D23A491CE12394003C51AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD6B87ED51812DAFC3E2C5A /* Pods-QRDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QRDiaryTests/Info.plist;
@@ -449,6 +627,7 @@
 		};
 		E1D23A4A1CE12394003C51AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF8E4F48A930EE54EEF68B6 /* Pods-QRDiaryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QRDiaryTests/Info.plist;
@@ -461,6 +640,7 @@
 		};
 		E1D23A4C1CE12394003C51AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B60FE9D41108599103D364E /* Pods-QRDiaryUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = QRDiaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -472,6 +652,7 @@
 		};
 		E1D23A4D1CE12394003C51AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A61907377789E642EC8ADF03 /* Pods-QRDiaryUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = QRDiaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -500,6 +681,7 @@
 				E1D23A471CE12394003C51AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1D23A481CE12394003C51AF /* Build configuration list for PBXNativeTarget "QRDiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +690,7 @@
 				E1D23A4A1CE12394003C51AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1D23A4B1CE12394003C51AF /* Build configuration list for PBXNativeTarget "QRDiaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +699,7 @@
 				E1D23A4D1CE12394003C51AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

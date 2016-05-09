@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+
+@property (nonatomic, strong)AVCaptureSession *captureSession;
+@property (nonatomic, strong)AVCaptureVideoPreviewLayer *captureVideoLayer;
 
 
 @end
