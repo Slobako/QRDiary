@@ -31,6 +31,9 @@
                                         <color key="backgroundColor" red="0.82259758029999996" green="1" blue="0.85081431630000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="SCAN"/>
+                                        <connections>
+                                            <action selector="scanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-OP-Yaj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
+    [self setupScanner];
     
 }
 
@@ -31,6 +31,11 @@
     //assign default device and media type as video
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:nil];
+    
+    if (!deviceInput) {
+        NSLog(@"Error Getting Camera Input");
+        return;
+    }
     
     //set the defined input for the session
     [self.captureSession addInput:deviceInput];
@@ -63,5 +68,11 @@
     [self.captureSession startRunning];
     
 }
+
+- (IBAction)scanTapped:(id)sender {
+    
+    
+}
+
 
 @end
