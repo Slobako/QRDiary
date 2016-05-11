@@ -61,16 +61,18 @@
     [self.captureVideoLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
     //frame needs CGRect type, that's why bounds
     [self.captureVideoLayer setFrame:self.videoPreviewView.bounds];
+    //set video orientaation as portrait
+    [[self.captureVideoLayer connection]setVideoOrientation:AVCaptureVideoOrientationPortrait];
+    
     //add captureVideoLayer as a sublayer onto videoPreviewView
     [self.videoPreviewView.layer addSublayer:self.captureVideoLayer];
-    
-    //run the session
-    [self.captureSession startRunning];
     
 }
 
 - (IBAction)scanTapped:(id)sender {
     
+    //run the session
+    [self.captureSession startRunning];
     
 }
 
