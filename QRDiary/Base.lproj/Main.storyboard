@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
-                                <rect key="frame" x="103" y="195" width="169" height="278"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
+                                <rect key="frame" x="24" y="628" width="328" height="39"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-y6-a4O">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="39"/>
@@ -27,7 +27,7 @@
                                         <state key="normal" title="VIEW MY SCANS"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-BS-Jaa">
-                                        <rect key="frame" x="0.0" y="239" width="169" height="39"/>
+                                        <rect key="frame" x="269" y="0.0" width="59" height="39"/>
                                         <color key="backgroundColor" red="0.82259758029999996" green="1" blue="0.85081431630000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="SCAN"/>
@@ -42,11 +42,19 @@
                         <constraints>
                             <constraint firstItem="dAC-pu-FtD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CcE-Fo-Z2T"/>
                             <constraint firstItem="dAC-pu-FtD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxL-ha-THh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAC-pu-FtD" secondAttribute="bottom" id="aUv-i1-QgL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CcE-Fo-Z2T"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="scanButton" destination="QN7-BS-Jaa" id="5Sf-vo-xoK"/>
                         <outlet property="videoPreviewView" destination="8bC-Xf-vdC" id="zMm-bR-zms"/>
+                        <outlet property="viewScannsButton" destination="tC9-y6-a4O" id="vww-ak-T3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

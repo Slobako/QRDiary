@@ -11,6 +11,8 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *videoPreviewView;
+@property (weak, nonatomic) IBOutlet UIButton *scanButton;
+@property (weak, nonatomic) IBOutlet UIButton *viewScannsButton;
 
 @end
 
@@ -70,13 +72,24 @@
     //add captureVideoLayer as a sublayer onto videoPreviewView
     [self.videoPreviewView.layer insertSublayer:self.captureVideoLayer atIndex:0];
     
+    self.scannerReady = YES;
+    
 }
 
 - (IBAction)scanTapped:(id)sender {
     
-    //run the session
-    [self.captureSession startRunning];
-    NSLog(@"start running");
+    if (self.scannerReady) {
+        //run the session
+        [self.captureSession startRunning];
+        NSLog(@"start running");
+    } else {
+        //setup the scanner and run the session
+        [self setupScanner];
+        [self.captureSession startRunning];
+    }
+    
+    self.scanButton.hidden = YES;
+    self.viewScannsButton.hidden = YES;
 }
 
 //implement the delegate method
@@ -87,8 +100,19 @@
         
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSLog(@"read code: %@", metadataObject.stringValue);
+            
+            [self stopScanning];
         }
     }
+}
+
+-(void)stopScanning {
+    
+    [self.captureSession stopRunning];
+    [self.captureVideoLayer removeFromSuperlayer];
+    self.scanButton.hidden = NO;
+    self.viewScannsButton.hidden = NO;
+    self.scannerReady = NO;
 }
 
 

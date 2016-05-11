@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong)AVCaptureSession *captureSession;
 @property (nonatomic, strong)AVCaptureVideoPreviewLayer *captureVideoLayer;
-
+@property (nonatomic)BOOL scannerReady;
 
 @end
 
