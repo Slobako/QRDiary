@@ -55,17 +55,20 @@
     
     //setting up capture video layer:
     
-    //initialize the layer
-    self.captureVideoLayer = [[AVCaptureVideoPreviewLayer alloc]init];
+    //initialize the layer with the captureSession
+    self.captureVideoLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:self.captureSession];
     //set video gravity to fill up the screen
-    [self.captureVideoLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+    [self.captureVideoLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     //frame needs CGRect type, that's why bounds
-    [self.captureVideoLayer setFrame:self.videoPreviewView.bounds];
+    //[self.captureVideoLayer setFrame:self.videoPreviewView.bounds];
+    
+    self.captureVideoLayer.frame = CGRectMake(0, 0, self.videoPreviewView.frame.size.width, self.videoPreviewView.frame.size.height);
+    
     //set video orientaation as portrait
     [[self.captureVideoLayer connection]setVideoOrientation:AVCaptureVideoOrientationPortrait];
     
     //add captureVideoLayer as a sublayer onto videoPreviewView
-    [self.videoPreviewView.layer addSublayer:self.captureVideoLayer];
+    [self.videoPreviewView.layer insertSublayer:self.captureVideoLayer atIndex:0];
     
 }
 
@@ -79,7 +82,7 @@
 //implement the delegate method
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     
-    if (metadataObjects != nil && metadataObjects.count > 0) {
+    if (metadataObjects != nil && metadataObjects.count == 1) {
         AVMetadataMachineReadableCodeObject *metadataObject = metadataObjects[0];
         
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
