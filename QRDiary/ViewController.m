@@ -73,7 +73,19 @@
     
     //run the session
     [self.captureSession startRunning];
+    NSLog(@"start running");
+}
+
+//implement the delegate method
+-(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     
+    if (metadataObjects != nil && metadataObjects.count > 0) {
+        AVMetadataMachineReadableCodeObject *metadataObject = metadataObjects[0];
+        
+        if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
+            NSLog(@"read code: %@", metadataObject.stringValue);
+        }
+    }
 }
 
 
