@@ -108,11 +108,15 @@
 
 -(void)stopScanning {
     
-    [self.captureSession stopRunning];
-    [self.captureVideoLayer removeFromSuperlayer];
-    self.scanButton.hidden = NO;
-    self.viewScannsButton.hidden = NO;
-    self.scannerReady = NO;
+    //in order not to modify the autolayout from a background thread, switching to the main thread
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self.captureSession stopRunning];
+        [self.captureVideoLayer removeFromSuperlayer];
+        self.scanButton.hidden = NO;
+        self.viewScannsButton.hidden = NO;
+        self.scannerReady = NO;
+
+    });
 }
 
 
