@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *videoPreviewView;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UIButton *viewScannsButton;
+@property (weak, nonatomic) IBOutlet UILabel *scanResultLabel;
 
 @end
 
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.scanResultLabel.hidden = YES;
+    
     [self setupScanner];
     
 }
@@ -90,6 +93,7 @@
     
     self.scanButton.hidden = YES;
     self.viewScannsButton.hidden = YES;
+    self.scanResultLabel.hidden = YES;
 }
 
 //implement the delegate method
@@ -101,22 +105,23 @@
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSLog(@"read code: %@", metadataObject.stringValue);
             
-            [self stopScanning];
+            //in order not to modify the autolayout from a background thread, switching to the main thread
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [self stopScanning];
+                self.scanResultLabel.text = metadataObject.stringValue;
+            });
         }
     }
 }
 
 -(void)stopScanning {
     
-    //in order not to modify the autolayout from a background thread, switching to the main thread
-    dispatch_sync(dispatch_get_main_queue(), ^{
         [self.captureSession stopRunning];
         [self.captureVideoLayer removeFromSuperlayer];
         self.scanButton.hidden = NO;
         self.viewScannsButton.hidden = NO;
         self.scannerReady = NO;
-
-    });
+        self.scanResultLabel.hidden = NO;
 }
 
 
