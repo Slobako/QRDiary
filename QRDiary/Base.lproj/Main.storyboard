@@ -18,22 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
-                                <rect key="frame" x="24" y="628" width="348" height="27"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
+                                <rect key="frame" x="63" y="583" width="248" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-y6-a4O">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="27"/>
-                                        <color key="backgroundColor" red="0.82259758029197405" green="1" blue="0.85081431626462367" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-y6-a4O">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="64"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                        <state key="normal" title="VIEW MY SCANS"/>
+                                        <state key="normal" image="notebook"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-BS-Jaa">
-                                        <rect key="frame" x="279" y="0.0" width="69" height="27"/>
-                                        <color key="backgroundColor" red="0.82259758029999996" green="1" blue="0.85081431630000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-BS-Jaa">
+                                        <rect key="frame" x="174" y="0.0" width="74" height="64"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                        <state key="normal" title="SCAN"/>
+                                        <state key="normal" image="qr-code-scan"/>
                                         <connections>
                                             <action selector="scanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-OP-Yaj"/>
                                         </connections>
@@ -54,26 +50,24 @@
                                     <action selector="cancelScanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNa-kc-Tjl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gR-4c-qXK">
+                                <rect key="frame" x="156" y="437" width="60" height="60"/>
+                                <state key="normal" image="save-diskette"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28392597992696128" green="0.73179810209424079" blue="0.25672865955254787" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dAC-pu-FtD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CcE-Fo-Z2T"/>
+                            <constraint firstItem="4gR-4c-qXK" firstAttribute="top" secondItem="gPs-n4-Bhd" secondAttribute="bottom" constant="20" id="9DM-RP-s6Q"/>
                             <constraint firstAttribute="trailing" secondItem="gPs-n4-Bhd" secondAttribute="trailing" constant="25" id="DMD-70-gMB"/>
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FhG-cO-v7z"/>
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="WwL-Yr-KlP"/>
                             <constraint firstItem="dAC-pu-FtD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxL-ha-THh"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAC-pu-FtD" secondAttribute="bottom" id="aUv-i1-QgL"/>
-                            <constraint firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8uz-ea-oIl" secondAttribute="leading" constant="10" id="cj6-e0-MbD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAC-pu-FtD" secondAttribute="bottom" constant="20" id="aUv-i1-QgL"/>
+                            <constraint firstItem="4gR-4c-qXK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBu-Rg-jNy"/>
                             <constraint firstItem="8uz-ea-oIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="gVs-BF-gUK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8uz-ea-oIl" secondAttribute="bottom" constant="10" id="nAp-cb-Fnk"/>
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="rbz-pj-dWW"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="cj6-e0-MbD"/>
-                                <exclude reference="CcE-Fo-Z2T"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -89,6 +83,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="notebook" width="64" height="64"/>
+        <image name="qr-code-scan" width="64" height="64"/>
+        <image name="save-diskette" width="64" height="64"/>
         <image name="video-cancel-button-red" width="64" height="64"/>
     </resources>
 </document>
