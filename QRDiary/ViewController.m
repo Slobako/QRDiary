@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UIButton *viewScannsButton;
 @property (weak, nonatomic) IBOutlet UITextView *scanResultTextView;
+@property (weak, nonatomic) IBOutlet UIButton *cancelScanButton;
 
 
 @end
@@ -28,6 +29,8 @@
     //round the edges
     self.scanResultTextView.clipsToBounds = YES;
     self.scanResultTextView.layer.cornerRadius = 5;
+    
+    self.cancelScanButton.hidden = YES;
     
     [self setupScanner];
     
@@ -96,8 +99,16 @@
         [self.captureSession startRunning];
     }
     
+    self.cancelScanButton.hidden = NO;
     self.scanButton.hidden = YES;
     self.viewScannsButton.hidden = YES;
+    self.scanResultTextView.hidden = YES;
+}
+
+- (IBAction)cancelScanTapped:(id)sender {
+    
+    [self stopScanning];
+    self.cancelScanButton.hidden = YES;
     self.scanResultTextView.hidden = YES;
 }
 
