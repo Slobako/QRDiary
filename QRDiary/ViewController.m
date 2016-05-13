@@ -13,7 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIView *videoPreviewView;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UIButton *viewScannsButton;
-@property (weak, nonatomic) IBOutlet UILabel *scanResultLabel;
+@property (weak, nonatomic) IBOutlet UITextView *scanResultTextView;
+
 
 @end
 
@@ -22,7 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.scanResultLabel.hidden = YES;
+    self.scanResultTextView.hidden = YES;
+    self.scanResultTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
+    //round the edges
+    self.scanResultTextView.clipsToBounds = YES;
+    self.scanResultTextView.layer.cornerRadius = 5;
     
     [self setupScanner];
     
@@ -93,7 +98,7 @@
     
     self.scanButton.hidden = YES;
     self.viewScannsButton.hidden = YES;
-    self.scanResultLabel.hidden = YES;
+    self.scanResultTextView.hidden = YES;
 }
 
 //implement the delegate method
@@ -108,7 +113,7 @@
             //in order not to modify the autolayout from a background thread, switching to the main thread
             dispatch_sync(dispatch_get_main_queue(), ^{
                 [self stopScanning];
-                self.scanResultLabel.text = metadataObject.stringValue;
+                self.scanResultTextView.text = metadataObject.stringValue;
             });
         }
     }
@@ -121,7 +126,7 @@
         self.scanButton.hidden = NO;
         self.viewScannsButton.hidden = NO;
         self.scannerReady = NO;
-        self.scanResultLabel.hidden = NO;
+        self.scanResultTextView.hidden = NO;
 }
 
 
