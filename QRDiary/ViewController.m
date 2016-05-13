@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *viewScannsButton;
 @property (weak, nonatomic) IBOutlet UITextView *scanResultTextView;
 @property (weak, nonatomic) IBOutlet UIButton *cancelScanButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 
 @end
@@ -31,6 +32,7 @@
     self.scanResultTextView.layer.cornerRadius = 5;
     
     self.cancelScanButton.hidden = YES;
+    self.saveButton.hidden = YES;
     
     [self setupScanner];
     
@@ -138,6 +140,7 @@
         self.scannerReady = NO;
         self.scanResultTextView.hidden = NO;
         self.cancelScanButton.hidden = YES;
+        self.saveButton.hidden = NO;
 }
 
 

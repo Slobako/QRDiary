@@ -72,6 +72,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelScanButton" destination="8uz-ea-oIl" id="NpZ-SI-Ff5"/>
+                        <outlet property="saveButton" destination="4gR-4c-qXK" id="ebI-UK-JgU"/>
                         <outlet property="scanButton" destination="QN7-BS-Jaa" id="5Sf-vo-xoK"/>
                         <outlet property="scanResultTextView" destination="gPs-n4-Bhd" id="hbK-GI-Wnd"/>
                         <outlet property="videoPreviewView" destination="8bC-Xf-vdC" id="zMm-bR-zms"/>
