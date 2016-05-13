@@ -108,7 +108,6 @@
 - (IBAction)cancelScanTapped:(id)sender {
     
     [self stopScanning];
-    self.cancelScanButton.hidden = YES;
     self.scanResultTextView.hidden = YES;
 }
 
@@ -138,6 +137,7 @@
         self.viewScannsButton.hidden = NO;
         self.scannerReady = NO;
         self.scanResultTextView.hidden = NO;
+        self.cancelScanButton.hidden = YES;
 }
 
 
