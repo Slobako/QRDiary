@@ -105,6 +105,7 @@
     self.scanButton.hidden = YES;
     self.viewScannsButton.hidden = YES;
     self.scanResultTextView.hidden = YES;
+    self.saveButton.hidden = YES;
 }
 
 - (IBAction)cancelScanTapped:(id)sender {
