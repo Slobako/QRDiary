@@ -18,13 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
-                                <rect key="frame" x="63" y="583" width="265" height="75"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-pu-FtD">
+                                <rect key="frame" x="55" y="572" width="265" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-y6-a4O">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="75"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" image="notebook-1"/>
+                                        <connections>
+                                            <segue destination="KoT-Cp-LP2" kind="presentation" identifier="viewScansSegue" id="zZQ-Rl-raj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-BS-Jaa">
                                         <rect key="frame" x="185" y="0.0" width="80" height="75"/>
@@ -53,6 +56,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gR-4c-qXK">
                                 <rect key="frame" x="156" y="437" width="60" height="60"/>
                                 <state key="normal" image="save-diskette-1"/>
+                                <connections>
+                                    <segue destination="KoT-Cp-LP2" kind="presentation" identifier="saveSegue" id="dbe-5I-bYz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28392597992696128" green="0.73179810209424079" blue="0.25672865955254787" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +88,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Saved ScansTVC-->
+        <scene sceneID="yrW-yp-c1s">
+            <objects>
+                <tableViewController id="KoT-Cp-LP2" customClass="QRDSavedScansTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2te-IU-aLF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="T6E-vs-Cje">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KoT-Cp-LP2" id="i8A-ww-lKc"/>
+                            <outlet property="delegate" destination="KoT-Cp-LP2" id="L9P-WF-MKv"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQ6-dA-OuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.5" y="275.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="notebook-1" width="75" height="75"/>
@@ -89,4 +124,7 @@
         <image name="save-diskette-1" width="60" height="60"/>
         <image name="video-cancel-button-red" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dbe-5I-bYz"/>
+    </inferredMetricsTieBreakers>
 </document>
