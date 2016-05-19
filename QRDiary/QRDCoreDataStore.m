@@ -98,5 +98,15 @@
     }
 }
 
+-(NSMutableArray *)fetchSavedScans {
+    
+    //create fetch request
+    NSFetchRequest *allScansRequest = [NSFetchRequest fetchRequestWithEntityName:@"QRDScan"];
+    //execute the request
+    self.savedScans = [[self.managedObjectContext executeFetchRequest:allScansRequest error:nil] mutableCopy];
+    
+    return self.savedScans;
+}
+
 
 @end

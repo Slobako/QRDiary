@@ -17,7 +17,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 
-@property(strong, nonatomic)NSArray *savedScans;
+@property(strong, nonatomic)NSMutableArray *savedScans;
 
 +(instancetype)sharedDataStore;
 -(void)saveContext;
