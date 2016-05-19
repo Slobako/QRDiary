@@ -10,4 +10,6 @@
 
 @interface QRDSavedScansTVC : UITableViewController
 
+@property (strong, nonatomic)NSString *scanToSave;
+
 @end

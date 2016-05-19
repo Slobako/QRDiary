@@ -21,6 +21,9 @@
 		E1D23A411CE12394003C51AF /* QRDiaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A401CE12394003C51AF /* QRDiaryUITests.m */; };
 		E1EDA9E91CE131910077A62E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EDA9E81CE131910077A62E /* AVFoundation.framework */; };
 		E1EDA9EC1CED2E4C0077A62E /* QRDSavedScansTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */; };
+		E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9F51CED3F860077A62E /* QRDScan+CoreDataProperties.m */; };
+		E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9F71CED3F860077A62E /* QRDScan.m */; };
+		E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		E1EDA9E81CE131910077A62E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDSavedScansTVC.h; sourceTree = "<group>"; };
 		E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDSavedScansTVC.m; sourceTree = "<group>"; };
+		E1EDA9F41CED3F860077A62E /* QRDScan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QRDScan+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E1EDA9F51CED3F860077A62E /* QRDScan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QRDScan+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E1EDA9F61CED3F860077A62E /* QRDScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDScan.h; sourceTree = "<group>"; };
+		E1EDA9F71CED3F860077A62E /* QRDScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDScan.m; sourceTree = "<group>"; };
+		E1EDA9FD1CEE720A0077A62E /* QRDCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDCoreDataStore.h; sourceTree = "<group>"; };
+		E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDCoreDataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +137,7 @@
 		E1D23A0C1CE12393003C51AF = {
 			isa = PBXGroup;
 			children = (
+				E1EDA9ED1CED3F3F0077A62E /* Models */,
 				E1D23A171CE12393003C51AF /* QRDiary */,
 				E1D23A341CE12394003C51AF /* QRDiaryTests */,
 				E1D23A3F1CE12394003C51AF /* QRDiaryUITests */,
@@ -150,6 +160,8 @@
 		E1D23A171CE12393003C51AF /* QRDiary */ = {
 			isa = PBXGroup;
 			children = (
+				E1EDA9FD1CEE720A0077A62E /* QRDCoreDataStore.h */,
+				E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */,
 				E1D23A1B1CE12393003C51AF /* AppDelegate.h */,
 				E1D23A1C1CE12393003C51AF /* AppDelegate.m */,
 				E1D23A1E1CE12393003C51AF /* ViewController.h */,
@@ -190,6 +202,17 @@
 				E1D23A421CE12394003C51AF /* Info.plist */,
 			);
 			path = QRDiaryUITests;
+			sourceTree = "<group>";
+		};
+		E1EDA9ED1CED3F3F0077A62E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDA9F41CED3F860077A62E /* QRDScan+CoreDataProperties.h */,
+				E1EDA9F51CED3F860077A62E /* QRDScan+CoreDataProperties.m */,
+				E1EDA9F61CED3F860077A62E /* QRDScan.h */,
+				E1EDA9F71CED3F860077A62E /* QRDScan.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,9 +476,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */,
 				E1D23A261CE12394003C51AF /* QRDiary.xcdatamodeld in Sources */,
 				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,
+				E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */,
+				E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */,
 				E1D23A1A1CE12393003C51AF /* main.m in Sources */,
 				E1EDA9EC1CED2E4C0077A62E /* QRDSavedScansTVC.m in Sources */,
 			);

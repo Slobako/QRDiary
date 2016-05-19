@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QRDSavedScansTVC.h"
 
 @interface ViewController ()
 
@@ -146,7 +147,10 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    
+    if ([segue.identifier isEqualToString:@"saveSegue"]) {
+        QRDSavedScansTVC *destVC = segue.destinationViewController;
+        destVC.scanToSave = self.scanResultTextView.text;
+    }
 }
 
 @end
