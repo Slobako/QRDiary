@@ -153,6 +153,9 @@
     NSString *scanString = self.scanResultTextView.text;
     
     if ([segue.identifier isEqualToString:@"saveSegue"]) {
+        
+        //adding new scan to an array of scans
+        
         QRDSavedScansTVC *destVC = segue.destinationViewController;
         destVC.scanToSave = scanString;
         
