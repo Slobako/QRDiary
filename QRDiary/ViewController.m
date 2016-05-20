@@ -157,7 +157,7 @@
         //adding new scan to an array of scans
         
         QRDSavedScansTVC *destVC = segue.destinationViewController;
-        destVC.scanToSave = scanString;
+        destVC.scanToSave = scanString; //might not need this either since I save it in core data below and then display all saved scans from core data in the destVC (table VC)
         
         //adding new scan to Core Data
         QRDScan *newScan = (QRDScan *)[NSEntityDescription insertNewObjectForEntityForName:@"QRDScan" inManagedObjectContext:self.dataStore.managedObjectContext];

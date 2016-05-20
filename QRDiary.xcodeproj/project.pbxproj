@@ -14,7 +14,6 @@
 		E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1C1CE12393003C51AF /* AppDelegate.m */; };
 		E1D23A201CE12393003C51AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1F1CE12393003C51AF /* ViewController.m */; };
 		E1D23A231CE12393003C51AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A211CE12393003C51AF /* Main.storyboard */; };
-		E1D23A261CE12394003C51AF /* QRDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */; };
 		E1D23A281CE12394003C51AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A271CE12394003C51AF /* Assets.xcassets */; };
 		E1D23A2B1CE12394003C51AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */; };
 		E1D23A361CE12394003C51AF /* QRDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A351CE12394003C51AF /* QRDiaryTests.m */; };
@@ -24,6 +23,8 @@
 		E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9F51CED3F860077A62E /* QRDScan+CoreDataProperties.m */; };
 		E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9F71CED3F860077A62E /* QRDScan.m */; };
 		E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */; };
+		E1EDAA001CEFCD6B0077A62E /* QRDiary.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */; };
+		E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EDAA001CEFCD6B0077A62E /* QRDiary.xcdatamodeld in Resources */,
 				E1D23A2B1CE12394003C51AF /* LaunchScreen.storyboard in Resources */,
 				E1D23A281CE12394003C51AF /* Assets.xcassets in Resources */,
 				E1D23A231CE12393003C51AF /* Main.storyboard in Resources */,
@@ -476,8 +478,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */,
 				E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */,
-				E1D23A261CE12394003C51AF /* QRDiary.xcdatamodeld in Sources */,
 				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,
 				E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */,
