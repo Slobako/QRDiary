@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QRDSavedScansTVC.h"
+#import "QRDScan.h"
 
 @interface ViewController ()
 
@@ -36,6 +37,8 @@
     self.saveButton.hidden = YES;
     
     [self setupScanner];
+    
+    self.dataStore = [QRDCoreDataStore sharedDataStore];
     
 }
 
@@ -147,9 +150,17 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    NSString *scanString = self.scanResultTextView.text;
+    
     if ([segue.identifier isEqualToString:@"saveSegue"]) {
         QRDSavedScansTVC *destVC = segue.destinationViewController;
-        destVC.scanToSave = self.scanResultTextView.text;
+        destVC.scanToSave = scanString;
+        
+        //adding new scan to Core Data
+        QRDScan *newScan = (QRDScan *)[NSEntityDescription insertNewObjectForEntityForName:@"QRDScan" inManagedObjectContext:self.dataStore.managedObjectContext];
+        newScan.scanText = scanString;
+        
+        [self.dataStore saveContext];
     }
 }
 
