@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="alG-ca-4Eo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,7 +26,7 @@
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" image="notebook-1"/>
                                         <connections>
-                                            <segue destination="KoT-Cp-LP2" kind="presentation" identifier="viewScansSegue" id="zZQ-Rl-raj"/>
+                                            <segue destination="KoT-Cp-LP2" kind="show" identifier="viewScansSegue" id="zZQ-Rl-raj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN7-BS-Jaa">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="156" y="437" width="60" height="60"/>
                                 <state key="normal" image="save-diskette-1"/>
                                 <connections>
-                                    <segue destination="KoT-Cp-LP2" kind="presentation" identifier="saveSegue" id="dbe-5I-bYz"/>
+                                    <segue destination="KoT-Cp-LP2" kind="show" identifier="saveSegue" id="dbe-5I-bYz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,6 +75,7 @@
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="rbz-pj-dWW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f7s-07-bWr"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelScanButton" destination="8uz-ea-oIl" id="NpZ-SI-Ff5"/>
@@ -87,6 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1116.5" y="275.5"/>
         </scene>
         <!--Saved ScansTVC-->
         <scene sceneID="yrW-yp-c1s">
@@ -98,7 +100,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scanCell" id="T6E-vs-Cje">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -115,7 +117,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ6-dA-OuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.5" y="275.5"/>
+            <point key="canvasLocation" x="1652.5" y="275.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vJl-mQ-TLi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="alG-ca-4Eo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fMM-Us-W5L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2uR-9c-d9W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZy-Kl-3kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610.5" y="275.5"/>
         </scene>
     </scenes>
     <resources>
@@ -125,6 +146,6 @@
         <image name="video-cancel-button-red" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dbe-5I-bYz"/>
+        <segue reference="zZQ-Rl-raj"/>
     </inferredMetricsTieBreakers>
 </document>
