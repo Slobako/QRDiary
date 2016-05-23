@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <UIKit/UIKit.h>
 
 
 @interface QRDCoreDataStore : NSObject
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
@@ -22,5 +23,6 @@
 +(instancetype)sharedDataStore;
 -(void)saveContext;
 -(NSURL *)applicationDocumentsDirectory;
+-(NSMutableArray *)fetchSavedScans;
 
 @end

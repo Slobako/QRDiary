@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     //have an array of saved scans that would be displayed in the table view
-    self.arrayOfSavedScans = [[NSMutableArray alloc]init];//might not even need this
+    //self.arrayOfSavedScans = [[NSMutableArray alloc]init];//might not even need this
     
     self.dataStore = [QRDCoreDataStore sharedDataStore];
 }
