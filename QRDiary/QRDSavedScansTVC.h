@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QRDCoreDataStore.h"
 
-@interface QRDSavedScansTVC : UITableViewController
+@interface QRDSavedScansTVC : UITableViewController 
 
 @property (strong, nonatomic)NSString *scanToSave;
 @property (strong, nonatomic)NSMutableArray *arrayOfSavedScans;
