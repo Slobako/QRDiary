@@ -42,6 +42,12 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    //to hide nav bar in root view controller
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 -(void)setupScanner {
     
     //initialize capture session
