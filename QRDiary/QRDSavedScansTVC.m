@@ -50,11 +50,6 @@
     
     cell.textLabel.text = scan.scanText;
     
-    //extending separator lines edge to edge
-    cell.preservesSuperviewLayoutMargins = false;
-    cell.separatorInset = UIEdgeInsetsZero;
-    cell.layoutMargins = UIEdgeInsetsZero;
-    
     return cell;
 }
 
