@@ -38,9 +38,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    NSLog(@"saved scans count is %lu", (unsigned long)self.dataStore.savedScans.count);
+    NSLog(@"saved scans count is %lu", (unsigned long)self.dataStore.fetchSavedScans.count);
     
-    return self.dataStore.savedScans.count;
+    return self.dataStore.fetchSavedScans.count;
 }
 
 
@@ -48,8 +48,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scanCell" forIndexPath:indexPath];
     
-    QRDScan *scan = self.dataStore.savedScans[indexPath.row];
-    NSLog(@"saved scan is: %@", self.dataStore.savedScans[indexPath.row]);
+    QRDScan *scan = self.dataStore.fetchSavedScans[indexPath.row];
+    NSLog(@"saved scan is: %@", self.dataStore.fetchSavedScans[indexPath.row]);
     cell.textLabel.text = scan.scanText;
     
     return cell;

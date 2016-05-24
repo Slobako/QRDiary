@@ -165,7 +165,9 @@
         newScan.scanText = scanString;
         
         //adding newScan to fetched savedScans array
-        [self.dataStore.fetchSavedScans addObject:newScan];
+        [self.dataStore.savedScans addObject:newScan];
+        
+        NSLog(@"self.datastore.savedscans is ::::: %@", self.dataStore.savedScans);
         
         [self.dataStore saveContext];
     }
