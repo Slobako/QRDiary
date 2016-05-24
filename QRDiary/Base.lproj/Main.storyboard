@@ -99,15 +99,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scanCell" rowHeight="60" id="T6E-vs-Cje">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="scanCell" rowHeight="60" id="T6E-vs-Cje">
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <segue destination="ff7-Bz-Vyz" kind="presentation" trigger="accessoryAction" modalTransitionStyle="crossDissolve" id="Vv4-6L-BLX"/>
+                                    <segue destination="ff7-Bz-Vyz" kind="presentation" identifier="viewScanSegue" trigger="accessoryAction" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Vv4-6L-BLX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,24 +124,42 @@
             </objects>
             <point key="canvasLocation" x="1652.5" y="275.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View Scan View Controller-->
         <scene sceneID="FMx-9u-wAS">
             <objects>
-                <viewController id="ff7-Bz-Vyz" sceneMemberID="viewController">
+                <viewController id="ff7-Bz-Vyz" customClass="QRDViewScanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yHq-RC-YIk"/>
                         <viewControllerLayoutGuide type="bottom" id="MeX-gf-KWW"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="nsw-ku-87h">
+                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="nsw-ku-87h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
-                                <rect key="frame" x="30" y="334" width="315" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.94484603830000002" blue="0.25822400029999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="30" y="334" width="315" height="250"/>
+                                <color key="backgroundColor" red="0.91004167209999998" green="1" blue="0.60878844830000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="3i5-Ty-iPN"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngc-xE-N3X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Thx-wa-C1w">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="2wq-HX-Xfb">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="ff7-Bz-Vyz" id="Knh-3L-cN0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.03125" green="0.03125" blue="0.03125" alpha="0.28415890960000001" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kOY-t3-aj2" firstAttribute="centerY" secondItem="nsw-ku-87h" secondAttribute="centerY" id="5hi-A0-AxT"/>
                             <constraint firstAttribute="trailing" secondItem="kOY-t3-aj2" secondAttribute="trailing" constant="30" id="fIM-ht-Zq4"/>
@@ -147,6 +167,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backButton" destination="2wq-HX-Xfb" id="NW1-ET-Cuy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2I-PH-TyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

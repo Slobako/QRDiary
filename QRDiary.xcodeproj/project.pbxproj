@@ -24,6 +24,7 @@
 		E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9F71CED3F860077A62E /* QRDScan.m */; };
 		E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */; };
 		E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */; };
+		E1EDAA041CF3FA680077A62E /* QRDViewScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		E1EDA9F71CED3F860077A62E /* QRDScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDScan.m; sourceTree = "<group>"; };
 		E1EDA9FD1CEE720A0077A62E /* QRDCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDCoreDataStore.h; sourceTree = "<group>"; };
 		E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDCoreDataStore.m; sourceTree = "<group>"; };
+		E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDViewScanViewController.h; sourceTree = "<group>"; };
+		E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDViewScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				E1D23A211CE12393003C51AF /* Main.storyboard */,
 				E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */,
 				E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */,
+				E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */,
+				E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */,
 				E1D23A271CE12394003C51AF /* Assets.xcassets */,
 				E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */,
 				E1D23A2C1CE12394003C51AF /* Info.plist */,
@@ -477,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */,
+				E1EDAA041CF3FA680077A62E /* QRDViewScanViewController.m in Sources */,
 				E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */,
 				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,

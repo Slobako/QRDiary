@@ -8,6 +8,7 @@
 
 #import "QRDSavedScansTVC.h"
 #import "QRDScan.h"
+#import "QRDViewScanViewController.h"
 
 @interface QRDSavedScansTVC ()
 
@@ -49,9 +50,13 @@
     
     cell.textLabel.text = scan.scanText;
     
+    //extending separator lines edge to edge
+    cell.preservesSuperviewLayoutMargins = false;
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -95,11 +100,21 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
+    [self performSegueWithIdentifier:@"viewScanSegue" sender:self];
 }
+
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    
+//    QRDViewScanViewController *destVC = segue.destinationViewController;
+//    
+//    NSIndexPath *selectedCell = [self.tableView indexPathForSelectedRow];
+//
+//
+//}
 
 
 @end
