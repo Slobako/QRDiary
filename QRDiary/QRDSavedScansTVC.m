@@ -18,9 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //have an array of saved scans that would be displayed in the table view
-    //self.arrayOfSavedScans = [[NSMutableArray alloc]init];//might not even need this
-    
     self.dataStore = [QRDCoreDataStore sharedDataStore];
 }
 
@@ -37,8 +34,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    NSLog(@"saved scans count is %lu", (unsigned long)self.dataStore.fetchSavedScans.count);
     
     return self.dataStore.fetchSavedScans.count;
 }
@@ -49,7 +44,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scanCell" forIndexPath:indexPath];
     
     QRDScan *scan = self.dataStore.fetchSavedScans[indexPath.row];
-    NSLog(@"saved scan is: %@", self.dataStore.fetchSavedScans[indexPath.row]);
+    
     cell.textLabel.text = scan.scanText;
     
     return cell;

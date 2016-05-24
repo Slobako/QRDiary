@@ -152,22 +152,18 @@
     
     NSString *scanString = self.scanResultTextView.text;
     
+    self.scanResultTextView.hidden = YES;
+    self.saveButton.hidden = YES;
+    
     //to make sure segue works only when scanString is not nil
     if ([segue.identifier isEqualToString:@"saveSegue"] && scanString) {
-        
-        //adding new scan to an array of scans
-        
-//        QRDSavedScansTVC *destVC = segue.destinationViewController;
-//        destVC.scanToSave = scanString; //might not need this either since I save it in core data below and then display all saved scans from core data in the destVC (table VC)
         
         //adding new scan to Core Data
         QRDScan *newScan = (QRDScan *)[NSEntityDescription insertNewObjectForEntityForName:@"QRDScan" inManagedObjectContext:self.dataStore.managedObjectContext];
         newScan.scanText = scanString;
         
-        //adding newScan to fetched savedScans array
+        //adding newScan to savedScans array (no need to fetch here since I am in CoreData already)
         [self.dataStore.savedScans addObject:newScan];
-        
-        NSLog(@"self.datastore.savedscans is ::::: %@", self.dataStore.savedScans);
         
         [self.dataStore saveContext];
     }
