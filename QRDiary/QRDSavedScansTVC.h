@@ -11,9 +11,6 @@
 
 @interface QRDSavedScansTVC : UITableViewController 
 
-//@property (strong, nonatomic)NSString *scanToSave;
-//@property (strong, nonatomic)NSMutableArray *arrayOfSavedScans;
-
 //instance of sharedDataStore to be able to communicate with Core Data and grab the saved scans which are a property of core data
 @property (strong, nonatomic)QRDCoreDataStore *dataStore;
 

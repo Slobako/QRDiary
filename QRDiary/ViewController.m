@@ -116,6 +116,7 @@
     
     [self stopScanning];
     self.scanResultTextView.hidden = YES;
+    self.saveButton.hidden = YES;
 }
 
 //implement the delegate method
@@ -152,9 +153,6 @@
     
     NSString *scanString = self.scanResultTextView.text;
     
-    self.scanResultTextView.hidden = YES;
-    self.saveButton.hidden = YES;
-    
     //to make sure segue works only when scanString is not nil
     if ([segue.identifier isEqualToString:@"saveSegue"] && scanString) {
         
@@ -166,6 +164,10 @@
         [self.dataStore.savedScans addObject:newScan];
         
         [self.dataStore saveContext];
+        
+        //hide these two after saving scan result
+        self.scanResultTextView.hidden = YES;
+        self.saveButton.hidden = YES;
     }
 }
 
