@@ -39,7 +39,6 @@
     [self setupScanner];
     
     self.dataStore = [QRDCoreDataStore sharedDataStore];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -96,7 +95,6 @@
     [self.videoPreviewView.layer insertSublayer:self.captureVideoLayer atIndex:0];
     
     self.scannerReady = YES;
-    
 }
 
 - (IBAction)scanTapped:(id)sender {

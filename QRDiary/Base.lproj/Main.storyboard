@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.28392597992696128" green="0.73179810209424079" blue="0.25672865955254787" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88977888770739466" green="1" blue="0.94373121671239091" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4gR-4c-qXK" firstAttribute="top" secondItem="gPs-n4-Bhd" secondAttribute="bottom" constant="20" id="9DM-RP-s6Q"/>
                             <constraint firstAttribute="trailing" secondItem="gPs-n4-Bhd" secondAttribute="trailing" constant="25" id="DMD-70-gMB"/>
@@ -99,13 +99,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scanCell" id="T6E-vs-Cje">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scanCell" rowHeight="60" id="T6E-vs-Cje">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ff7-Bz-Vyz" kind="presentation" trigger="accessoryAction" modalTransitionStyle="crossDissolve" id="Vv4-6L-BLX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -118,6 +121,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ6-dA-OuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1652.5" y="275.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FMx-9u-wAS">
+            <objects>
+                <viewController id="ff7-Bz-Vyz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yHq-RC-YIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="MeX-gf-KWW"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="nsw-ku-87h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
+                                <rect key="frame" x="30" y="334" width="315" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.94484603830000002" blue="0.25822400029999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="centerY" secondItem="nsw-ku-87h" secondAttribute="centerY" id="5hi-A0-AxT"/>
+                            <constraint firstAttribute="trailing" secondItem="kOY-t3-aj2" secondAttribute="trailing" constant="30" id="fIM-ht-Zq4"/>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="leading" secondItem="nsw-ku-87h" secondAttribute="leading" constant="30" id="kBO-qV-Mm4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2I-PH-TyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2185.5" y="275.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vJl-mQ-TLi">
