@@ -12,6 +12,8 @@
 
 @interface QRDSavedScansTVC ()
 
+@property (strong, nonatomic)NSArray *scans;
+
 @end
 
 @implementation QRDSavedScansTVC
@@ -22,6 +24,8 @@
     [self.navigationController setNavigationBarHidden:NO];
     
     self.dataStore = [QRDCoreDataStore sharedDataStore];
+    
+    self.scans = self.dataStore.fetchSavedScans;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,15 +105,14 @@
 }
 
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    
-//    QRDViewScanViewController *destVC = segue.destinationViewController;
-//    
-//    NSIndexPath *selectedCell = [self.tableView indexPathForSelectedRow];
-//
-//
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    QRDViewScanViewController *destVC = segue.destinationViewController;
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    destVC.textToDisplay = ((QRDScan *)self.scans[indexPath.row]).scanText;
+}
 
 
 @end

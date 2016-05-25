@@ -26,6 +26,8 @@
     self.savedScanTextView.clipsToBounds = YES;
     self.savedScanTextView.layer.cornerRadius = 5;
     
+    self.savedScanTextView.text = self.textToDisplay;
+    
 }
 
 - (void)didReceiveMemoryWarning {

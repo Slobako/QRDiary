@@ -10,4 +10,6 @@
 
 @interface QRDViewScanViewController : UIViewController
 
+@property (strong, nonatomic)NSString *textToDisplay;
+
 @end

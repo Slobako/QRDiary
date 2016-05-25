@@ -145,7 +145,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gA6-2D-iA3"/>
-                                    <barButtonItem systemItem="reply" id="HRH-Jj-x9b">
+                                    <barButtonItem systemItem="stop" id="HRH-Jj-x9b">
                                         <connections>
                                             <action selector="returnTapped:" destination="ff7-Bz-Vyz" id="kIH-gE-AK6"/>
                                         </connections>
