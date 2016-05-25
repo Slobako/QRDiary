@@ -54,8 +54,15 @@
     
     cell.textLabel.text = scan.scanText;
     
+    [cell.contentView.layer setBorderColor:[UIColor blueColor].CGColor];
+    [cell.contentView.layer setBorderWidth:2.0];
+    
     return cell;
 }
+
+//[self.myTableViewCell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
+//[self.myTableViewCell.contentView.layer setBorderWidth:1.0f];
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -98,7 +105,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"viewScanSegue" sender:self];

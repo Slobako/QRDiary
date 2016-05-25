@@ -94,7 +94,7 @@
         <scene sceneID="yrW-yp-c1s">
             <objects>
                 <tableViewController id="KoT-Cp-LP2" customClass="QRDSavedScansTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="2te-IU-aLF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="2te-IU-aLF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,8 +155,8 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
                                 <rect key="frame" x="30" y="209" width="315" height="250"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-0o-RxJ">
-                                        <rect key="frame" x="30" y="30" width="255" height="120"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-0o-RxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="0.0"/>
                                         <color key="backgroundColor" red="0.91004167209999998" green="1" blue="0.60878844830000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -165,9 +165,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ei8-0o-RxJ" secondAttribute="trailing" constant="30" id="0C8-OM-kDL"/>
-                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="leading" secondItem="kOY-t3-aj2" secondAttribute="leading" constant="30" id="G3R-Yg-8vB"/>
-                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="top" secondItem="kOY-t3-aj2" secondAttribute="top" constant="30" id="hFS-cG-7jX"/>
+                                    <constraint firstAttribute="trailing" secondItem="ei8-0o-RxJ" secondAttribute="trailing" id="0C8-OM-kDL"/>
+                                    <constraint firstAttribute="bottom" secondItem="ei8-0o-RxJ" secondAttribute="bottom" id="Ftp-5P-wIo"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="leading" secondItem="kOY-t3-aj2" secondAttribute="leading" id="G3R-Yg-8vB"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="top" secondItem="kOY-t3-aj2" secondAttribute="top" id="hFS-cG-7jX"/>
                                 </constraints>
                             </view>
                         </subviews>

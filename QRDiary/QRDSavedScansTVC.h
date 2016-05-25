@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QRDCoreDataStore.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface QRDSavedScansTVC : UITableViewController 
 
