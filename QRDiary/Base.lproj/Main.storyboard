@@ -139,12 +139,36 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="3i5-Ty-iPN"/>
+                                    <barButtonItem systemItem="action" id="3i5-Ty-iPN">
+                                        <connections>
+                                            <action selector="shareTapped:" destination="ff7-Bz-Vyz" id="CQe-Pj-reM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="reply" id="HRH-Jj-x9b">
+                                        <inset key="imageInsets" minX="570" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="returnTapped:" destination="ff7-Bz-Vyz" id="kIH-gE-AK6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
                                 <rect key="frame" x="30" y="209" width="315" height="250"/>
-                                <color key="backgroundColor" red="0.91004167209999998" green="1" blue="0.60878844830000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-0o-RxJ">
+                                        <rect key="frame" x="30" y="30" width="255" height="120"/>
+                                        <color key="backgroundColor" red="0.91004167209999998" green="1" blue="0.60878844830000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ei8-0o-RxJ" secondAttribute="trailing" constant="30" id="0C8-OM-kDL"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="leading" secondItem="kOY-t3-aj2" secondAttribute="leading" constant="30" id="G3R-Yg-8vB"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="top" secondItem="kOY-t3-aj2" secondAttribute="top" constant="30" id="hFS-cG-7jX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.03125" green="0.03125" blue="0.03125" alpha="0.28415890960000001" colorSpace="calibratedRGB"/>
@@ -155,6 +179,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="detailView" destination="kOY-t3-aj2" id="oLi-zO-aap"/>
+                        <outlet property="savedScanTextView" destination="ei8-0o-RxJ" id="CXJ-CA-9IU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2I-PH-TyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

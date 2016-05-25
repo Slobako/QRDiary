@@ -10,7 +10,8 @@
 
 @interface QRDViewScanViewController ()
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (weak, nonatomic) IBOutlet UIView *detailView;
+@property (weak, nonatomic) IBOutlet UITextView *savedScanTextView;
 
 
 @end
@@ -19,7 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.detailView.clipsToBounds = YES;
+    self.detailView.layer.cornerRadius = 5;
+    self.savedScanTextView.clipsToBounds = YES;
+    self.savedScanTextView.layer.cornerRadius = 5;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,10 +33,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backButtonTapped:(id)sender {
+- (IBAction)returnTapped:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)shareTapped:(id)sender {
+    
+    NSString *textToShare = self.savedScanTextView.text;
+    
+    NSArray *activityItems = @[textToShare];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo,
+                                   UIActivityTypeAirDrop,];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation
