@@ -22,9 +22,9 @@
     [super viewDidLoad];
     
     self.detailView.clipsToBounds = YES;
-    self.detailView.layer.cornerRadius = 5;
+    self.detailView.layer.cornerRadius = 10;
     self.savedScanTextView.clipsToBounds = YES;
-    self.savedScanTextView.layer.cornerRadius = 5;
+    self.savedScanTextView.layer.cornerRadius = 10;
     self.savedScanTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
     
     self.savedScanTextView.text = self.textToDisplay;

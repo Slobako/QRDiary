@@ -11,9 +11,6 @@
 
 @interface QRDSavedScanTVCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *labelTVCell;
-
-
 @end
 
 

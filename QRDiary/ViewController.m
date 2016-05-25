@@ -31,7 +31,7 @@
     self.scanResultTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
     //round the edges
     self.scanResultTextView.clipsToBounds = YES;
-    self.scanResultTextView.layer.cornerRadius = 5;
+    self.scanResultTextView.layer.cornerRadius = 10;
     
     self.cancelScanButton.hidden = YES;
     self.saveButton.hidden = YES;
