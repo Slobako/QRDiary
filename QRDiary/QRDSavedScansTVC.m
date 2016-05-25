@@ -28,7 +28,7 @@
     
     self.scans = self.dataStore.fetchSavedScans;
     
-    
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,10 +72,6 @@
  
     return cell;
 }
-
-//[self.myTableViewCell.contentView.layer setBorderColor:[UIColor redColor].CGColor];
-//[self.myTableViewCell.contentView.layer setBorderWidth:1.0f];
-
 
 /*
 // Override to support conditional editing of the table view.
