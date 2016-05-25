@@ -46,6 +46,7 @@
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
+    //excluding the activity types I don't want shown
     NSArray *excludeActivities = @[UIActivityTypePrint,
                                    UIActivityTypeAssignToContact,
                                    UIActivityTypeSaveToCameraRoll,

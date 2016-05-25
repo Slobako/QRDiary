@@ -144,8 +144,8 @@
                                             <action selector="shareTapped:" destination="ff7-Bz-Vyz" id="CQe-Pj-reM"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gA6-2D-iA3"/>
                                     <barButtonItem systemItem="reply" id="HRH-Jj-x9b">
-                                        <inset key="imageInsets" minX="570" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <action selector="returnTapped:" destination="ff7-Bz-Vyz" id="kIH-gE-AK6"/>
                                         </connections>
