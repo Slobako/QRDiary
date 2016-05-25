@@ -9,6 +9,7 @@
 #import "QRDSavedScansTVC.h"
 #import "QRDScan.h"
 #import "QRDViewScanViewController.h"
+#import "QRDSavedScanTVCell.h"
 
 @interface QRDSavedScansTVC ()
 
@@ -52,10 +53,19 @@
     
     QRDScan *scan = self.dataStore.fetchSavedScans[indexPath.row];
     
-    cell.textLabel.text = scan.scanText;
+    //cell.textLabel.text = scan.scanText;
     
-    [cell.contentView.layer setBorderColor:[UIColor blueColor].CGColor];
-    [cell.contentView.layer setBorderWidth:2.0];
+    //customizing cells separators
+//    [cell.contentView.layer setBorderColor:[UIColor blueColor].CGColor];
+//    [cell.contentView.layer setBorderWidth:2.0];
+    
+//    UIButton *objectOfButton = (UIButton *)[CellLast viewWithTag:200];
+//    
+//    [objectOfButton addTarget:self action:@selector(YourSelector:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *labelObject = (UILabel *)[cell viewWithTag:777];
+
+    labelObject.text = scan.scanText;
     
     return cell;
 }

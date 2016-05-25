@@ -25,6 +25,7 @@
 		E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */; };
 		E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */; };
 		E1EDAA041CF3FA680077A62E /* QRDViewScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */; };
+		E1EDAA0A1CF644C70077A62E /* QRDSavedScanTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDCoreDataStore.m; sourceTree = "<group>"; };
 		E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDViewScanViewController.h; sourceTree = "<group>"; };
 		E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDViewScanViewController.m; sourceTree = "<group>"; };
+		E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDSavedScanTVCell.h; sourceTree = "<group>"; };
+		E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDSavedScanTVCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				E1D23A1E1CE12393003C51AF /* ViewController.h */,
 				E1D23A1F1CE12393003C51AF /* ViewController.m */,
 				E1D23A211CE12393003C51AF /* Main.storyboard */,
+				E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */,
+				E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */,
 				E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */,
 				E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */,
 				E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */,
@@ -487,6 +492,7 @@
 				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,
 				E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */,
+				E1EDAA0A1CF644C70077A62E /* QRDSavedScanTVCell.m in Sources */,
 				E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */,
 				E1D23A1A1CE12393003C51AF /* main.m in Sources */,
 				E1EDA9EC1CED2E4C0077A62E /* QRDSavedScansTVC.m in Sources */,

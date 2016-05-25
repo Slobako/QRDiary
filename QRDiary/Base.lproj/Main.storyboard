@@ -99,17 +99,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="scanCell" rowHeight="60" id="T6E-vs-Cje">
+                            <tableViewCell clipsSubviews="YES" tag="777" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="scanCell" rowHeight="60" id="T6E-vs-Cje" customClass="QRDSavedScanTVCell">
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6E-vs-Cje" id="VOe-et-P2I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61a-tc-vcZ">
+                                            <rect key="frame" x="5" y="2" width="365" height="56"/>
+                                            <attributedString key="attributedText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="61a-tc-vcZ" secondAttribute="trailing" constant="5" id="GeN-Rf-LaE"/>
+                                        <constraint firstItem="61a-tc-vcZ" firstAttribute="leading" secondItem="VOe-et-P2I" secondAttribute="leading" constant="5" id="fPl-JW-seN"/>
+                                        <constraint firstAttribute="bottom" secondItem="61a-tc-vcZ" secondAttribute="bottom" constant="2" id="sEa-PG-Ejg"/>
+                                        <constraint firstItem="61a-tc-vcZ" firstAttribute="top" secondItem="VOe-et-P2I" secondAttribute="top" constant="2" id="w9T-t7-xpf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="labelTVCell" destination="61a-tc-vcZ" id="nxl-mh-P05"/>
                                     <segue destination="ff7-Bz-Vyz" kind="presentation" identifier="viewScanSegue" trigger="accessoryAction" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Vv4-6L-BLX"/>
                                 </connections>
                             </tableViewCell>
