@@ -27,6 +27,8 @@
     self.dataStore = [QRDCoreDataStore sharedDataStore];
     
     self.scans = self.dataStore.fetchSavedScans;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,20 +55,21 @@
     
     QRDScan *scan = self.dataStore.fetchSavedScans[indexPath.row];
     
-    //cell.textLabel.text = scan.scanText;
+    cell.textLabel.text = scan.scanText;
     
     //customizing cells separators
-//    [cell.contentView.layer setBorderColor:[UIColor blueColor].CGColor];
-//    [cell.contentView.layer setBorderWidth:2.0];
+    [cell.contentView.layer setBorderColor:[UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0].CGColor];
+    [cell.contentView.layer setBorderWidth:4.0];
+    cell.contentView.clipsToBounds = YES;
+    cell.contentView.layer.cornerRadius = 10;
     
-//    UIButton *objectOfButton = (UIButton *)[CellLast viewWithTag:200];
+//    UILabel *labelObject = (UILabel *)[cell viewWithTag:777];
+//
+//    labelObject.text = scan.scanText;
 //    
-//    [objectOfButton addTarget:self action:@selector(YourSelector:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UILabel *labelObject = (UILabel *)[cell viewWithTag:777];
-
-    labelObject.text = scan.scanText;
-    
+//    labelObject.clipsToBounds = YES;
+//    labelObject.layer.cornerRadius = 10;
+ 
     return cell;
 }
 

@@ -19,6 +19,8 @@
 
 @implementation QRDSavedScanTVCell
 
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
