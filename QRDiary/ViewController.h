@@ -10,7 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "QRDCoreDataStore.h"
 
-
 @interface ViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, strong)AVCaptureSession *captureSession;

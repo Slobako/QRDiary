@@ -29,6 +29,11 @@
 
     self.scanResultTextView.hidden = YES;
     self.scanResultTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
+    //add a border frame
+    self.scanResultTextView.layer.borderWidth = 8.0;
+    self.scanResultTextView.layer.borderColor = [[UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0] CGColor];
+    self.scanResultTextView.textContainerInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
+    
     //round the edges
     self.scanResultTextView.clipsToBounds = YES;
     self.scanResultTextView.layer.cornerRadius = 10;
