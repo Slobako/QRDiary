@@ -137,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="3i5-Ty-iPN">
@@ -175,10 +175,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.03125" green="0.03125" blue="0.03125" alpha="0.4082723848" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B3g-By-AEX" secondAttribute="trailing" id="1rz-yG-rO8"/>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="centerX" secondItem="B3g-By-AEX" secondAttribute="centerX" id="2Rt-Oz-RGs"/>
                             <constraint firstItem="kOY-t3-aj2" firstAttribute="centerY" secondItem="nsw-ku-87h" secondAttribute="centerY" id="5hi-A0-AxT"/>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="top" secondItem="yHq-RC-YIk" secondAttribute="bottom" constant="189" id="EOD-2I-Hfa"/>
+                            <constraint firstItem="B3g-By-AEX" firstAttribute="leading" secondItem="nsw-ku-87h" secondAttribute="leading" id="H1k-Bf-feC"/>
+                            <constraint firstItem="B3g-By-AEX" firstAttribute="bottom" secondItem="MeX-gf-KWW" secondAttribute="top" id="PQv-DV-ncH"/>
                             <constraint firstAttribute="trailing" secondItem="kOY-t3-aj2" secondAttribute="trailing" constant="30" id="fIM-ht-Zq4"/>
                             <constraint firstItem="kOY-t3-aj2" firstAttribute="leading" secondItem="nsw-ku-87h" secondAttribute="leading" constant="30" id="kBO-qV-Mm4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Rt-Oz-RGs"/>
+                                <exclude reference="EOD-2I-Hfa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
