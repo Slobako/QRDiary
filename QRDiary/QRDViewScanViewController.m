@@ -21,13 +21,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.savedScanTextView.text = self.textToDisplay;
+    
+    //3 different sizes of detailView depending on the number of lines in scanned text
+    NSUInteger numberOfLines = self.savedScanTextView.contentSize.height / self.savedScanTextView.font.lineHeight;
+    
+    if (numberOfLines < 5) {
+        [self.detailView.heightAnchor constraintEqualToConstant:125].active = YES;
+    } else if (numberOfLines >= 5 && numberOfLines < 10) {
+        [self.detailView.heightAnchor constraintEqualToConstant:250].active = YES;
+    } else {
+        [self.detailView.heightAnchor constraintEqualToConstant:375].active = YES;
+    }
+    
     self.detailView.clipsToBounds = YES;
     self.detailView.layer.cornerRadius = 10;
+    self.detailView.backgroundColor = [UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0];
     self.savedScanTextView.clipsToBounds = YES;
     self.savedScanTextView.layer.cornerRadius = 10;
-    self.savedScanTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
+    self.savedScanTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:18.0];
     
-    self.savedScanTextView.text = self.textToDisplay;
+    
     
 }
 

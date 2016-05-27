@@ -133,11 +133,11 @@
                         <viewControllerLayoutGuide type="top" id="yHq-RC-YIk"/>
                         <viewControllerLayoutGuide type="bottom" id="MeX-gf-KWW"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="nsw-ku-87h">
+                    <view key="view" contentMode="scaleToFill" id="nsw-ku-87h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-By-AEX">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="3i5-Ty-iPN">
@@ -153,10 +153,10 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-t3-aj2">
                                 <rect key="frame" x="30" y="209" width="315" height="250"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-0o-RxJ">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-0o-RxJ">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="0.0"/>
                                         <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText"/>
@@ -166,17 +166,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ei8-0o-RxJ" secondAttribute="trailing" id="0C8-OM-kDL"/>
-                                    <constraint firstAttribute="bottom" secondItem="ei8-0o-RxJ" secondAttribute="bottom" id="Ftp-5P-wIo"/>
-                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="leading" secondItem="kOY-t3-aj2" secondAttribute="leading" id="G3R-Yg-8vB"/>
-                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="top" secondItem="kOY-t3-aj2" secondAttribute="top" id="hFS-cG-7jX"/>
+                                    <constraint firstAttribute="trailing" secondItem="ei8-0o-RxJ" secondAttribute="trailing" constant="8" id="0C8-OM-kDL"/>
+                                    <constraint firstAttribute="bottom" secondItem="ei8-0o-RxJ" secondAttribute="bottom" constant="8" id="Ftp-5P-wIo"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="leading" secondItem="kOY-t3-aj2" secondAttribute="leading" constant="8" id="G3R-Yg-8vB"/>
+                                    <constraint firstItem="ei8-0o-RxJ" firstAttribute="top" secondItem="kOY-t3-aj2" secondAttribute="top" constant="8" id="hFS-cG-7jX"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.03125" green="0.03125" blue="0.03125" alpha="0.28415890960000001" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.03125" green="0.03125" blue="0.03125" alpha="0.4082723848" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kOY-t3-aj2" firstAttribute="centerY" secondItem="nsw-ku-87h" secondAttribute="centerY" id="5hi-A0-AxT"/>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="top" secondItem="yHq-RC-YIk" secondAttribute="bottom" constant="189" placeholder="YES" id="TGQ-w9-hql"/>
                             <constraint firstAttribute="trailing" secondItem="kOY-t3-aj2" secondAttribute="trailing" constant="30" id="fIM-ht-Zq4"/>
+                            <constraint firstItem="kOY-t3-aj2" firstAttribute="centerX" secondItem="B3g-By-AEX" secondAttribute="centerX" placeholder="YES" id="hxz-jk-B6z"/>
                             <constraint firstItem="kOY-t3-aj2" firstAttribute="leading" secondItem="nsw-ku-87h" secondAttribute="leading" constant="30" id="kBO-qV-Mm4"/>
                         </constraints>
                     </view>
