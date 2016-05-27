@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *scanResultTextView;
 @property (weak, nonatomic) IBOutlet UIButton *cancelScanButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
 
 @end
@@ -119,6 +120,7 @@
     self.viewScannsButton.hidden = YES;
     self.scanResultTextView.hidden = YES;
     self.saveButton.hidden = YES;
+    self.logoImage.hidden = YES;
 }
 
 - (IBAction)cancelScanTapped:(id)sender {
@@ -156,6 +158,7 @@
         self.scanResultTextView.hidden = NO;
         self.cancelScanButton.hidden = YES;
         self.saveButton.hidden = NO;
+        self.logoImage.hidden = NO;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

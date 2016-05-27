@@ -41,7 +41,7 @@
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-n4-Bhd">
                                 <rect key="frame" x="25" y="251" width="325" height="166"/>
-                                <color key="backgroundColor" red="0.91004167212911069" green="1" blue="0.60878844829129841" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
@@ -60,12 +60,17 @@
                                     <segue destination="KoT-Cp-LP2" kind="show" identifier="saveSegue" id="dbe-5I-bYz"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRDiary-text-logo-dokyo80%" translatesAutoresizingMaskIntoConstraints="NO" id="22i-mU-h5m">
+                                <rect key="frame" x="73" y="64" width="229" height="69"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88977888770739466" green="1" blue="0.94373121671239091" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="22i-mU-h5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="199-EA-Dnb"/>
                             <constraint firstItem="4gR-4c-qXK" firstAttribute="top" secondItem="gPs-n4-Bhd" secondAttribute="bottom" constant="20" id="9DM-RP-s6Q"/>
                             <constraint firstAttribute="trailing" secondItem="gPs-n4-Bhd" secondAttribute="trailing" constant="25" id="DMD-70-gMB"/>
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FhG-cO-v7z"/>
+                            <constraint firstItem="22i-mU-h5m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Va6-8z-4Im"/>
                             <constraint firstItem="gPs-n4-Bhd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="WwL-Yr-KlP"/>
                             <constraint firstItem="dAC-pu-FtD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxL-ha-THh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAC-pu-FtD" secondAttribute="bottom" constant="20" id="aUv-i1-QgL"/>
@@ -79,6 +84,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelScanButton" destination="8uz-ea-oIl" id="NpZ-SI-Ff5"/>
+                        <outlet property="logoImage" destination="22i-mU-h5m" id="XXr-Ey-qum"/>
                         <outlet property="saveButton" destination="4gR-4c-qXK" id="ebI-UK-JgU"/>
                         <outlet property="scanButton" destination="QN7-BS-Jaa" id="5Sf-vo-xoK"/>
                         <outlet property="scanResultTextView" destination="gPs-n4-Bhd" id="hbK-GI-Wnd"/>
@@ -226,6 +232,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="QRDiary-text-logo-dokyo80%" width="229" height="69"/>
         <image name="notebook-1" width="75" height="75"/>
         <image name="qr-code-scan-1" width="70" height="70"/>
         <image name="save-diskette-1" width="60" height="60"/>
