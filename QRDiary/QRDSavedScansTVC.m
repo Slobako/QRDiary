@@ -80,8 +80,7 @@
     }
 }
 
-
-#pragma mark - Navigation
+//Navigation
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

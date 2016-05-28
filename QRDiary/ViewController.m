@@ -33,6 +33,7 @@
     //add a border frame
     self.scanResultTextView.layer.borderWidth = 8.0;
     self.scanResultTextView.layer.borderColor = [[UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0] CGColor];
+    //increase text inset so that frame doesn't cover the text on sides
     self.scanResultTextView.textContainerInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
     
     //round the edges
@@ -108,7 +109,9 @@
     if (self.scannerReady) {
         //run the session
         [self.captureSession startRunning];
+        
         NSLog(@"start running");
+        
     } else {
         //setup the scanner and run the session
         [self setupScanner];

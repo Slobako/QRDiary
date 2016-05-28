@@ -34,15 +34,13 @@
         [self.detailView.heightAnchor constraintEqualToConstant:375].active = YES;
     }
     
+    //rounding the corners and setting the color and font
     self.detailView.clipsToBounds = YES;
     self.detailView.layer.cornerRadius = 10;
     self.detailView.backgroundColor = [UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0];
     self.savedScanTextView.clipsToBounds = YES;
     self.savedScanTextView.layer.cornerRadius = 10;
     self.savedScanTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:18.0];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +57,7 @@
     
     NSString *textToShare = self.savedScanTextView.text;
     
+    //intlzr below requires an array for the items that are to be shared, since I have just text, array contains only one element
     NSArray *activityItems = @[textToShare];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
@@ -76,16 +75,5 @@
     
     [self presentViewController:activityVC animated:YES completion:nil];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
