@@ -10,6 +10,7 @@
 		2FFB7082391ABA066019ECEB /* libPods-QRDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60785029EAAC9678EC3FA019 /* libPods-QRDiaryTests.a */; };
 		8CAD5FE01C727B0288609B27 /* libPods-QRDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6930BD86E92663E1ABF8C5BF /* libPods-QRDiary.a */; };
 		909B0ED76A4C5661CDCF4E11 /* libPods-QRDiaryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995232DDCD0B3ACC7C629B77 /* libPods-QRDiaryUITests.a */; };
+		E106715C1CFE5A4500D8412A /* QRDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */; };
 		E1D23A1A1CE12393003C51AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A191CE12393003C51AF /* main.m */; };
 		E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1C1CE12393003C51AF /* AppDelegate.m */; };
 		E1D23A201CE12393003C51AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1F1CE12393003C51AF /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		8CF8E4F48A930EE54EEF68B6 /* Pods-QRDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryTests/Pods-QRDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		995232DDCD0B3ACC7C629B77 /* libPods-QRDiaryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRDiaryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61907377789E642EC8ADF03 /* Pods-QRDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRDiaryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRDiaryUITests/Pods-QRDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E106715A1CFE5A4500D8412A /* QRDInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDInfoViewController.h; sourceTree = "<group>"; };
+		E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRDInfoViewController.m; sourceTree = "<group>"; };
 		E1D23A151CE12393003C51AF /* QRDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D23A191CE12393003C51AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1D23A1B1CE12393003C51AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				E1D23A1E1CE12393003C51AF /* ViewController.h */,
 				E1D23A1F1CE12393003C51AF /* ViewController.m */,
 				E1D23A211CE12393003C51AF /* Main.storyboard */,
+				E106715A1CFE5A4500D8412A /* QRDInfoViewController.h */,
+				E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */,
 				E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */,
 				E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */,
 				E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */,
@@ -491,6 +496,7 @@
 				E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */,
 				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,
+				E106715C1CFE5A4500D8412A /* QRDInfoViewController.m in Sources */,
 				E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */,
 				E1EDAA0A1CF644C70077A62E /* QRDSavedScanTVCell.m in Sources */,
 				E1EDA9F91CED3F860077A62E /* QRDScan.m in Sources */,
