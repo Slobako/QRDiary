@@ -66,6 +66,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uah-1A-dvF">
                                 <rect key="frame" x="312" y="84" width="24" height="24"/>
                                 <state key="normal" image="information"/>
+                                <connections>
+                                    <segue destination="tmC-XA-xbI" kind="show" id="Td0-bO-GJk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88977888770739466" green="1" blue="0.94373121671239091" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,6 +93,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelScanButton" destination="8uz-ea-oIl" id="NpZ-SI-Ff5"/>
+                        <outlet property="infoButton" destination="uah-1A-dvF" id="rPd-Be-WLO"/>
                         <outlet property="logoImage" destination="22i-mU-h5m" id="XXr-Ey-qum"/>
                         <outlet property="saveButton" destination="4gR-4c-qXK" id="ebI-UK-JgU"/>
                         <outlet property="scanButton" destination="QN7-BS-Jaa" id="5Sf-vo-xoK"/>
@@ -102,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1116.5" y="275.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="gfv-mL-4Je">
             <objects>
-                <viewController id="tmC-XA-xbI" sceneMemberID="viewController">
+                <viewController id="tmC-XA-xbI" customClass="QRDInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CV2-lC-GpS"/>
                         <viewControllerLayoutGuide type="bottom" id="MNy-GV-iO0"/>
