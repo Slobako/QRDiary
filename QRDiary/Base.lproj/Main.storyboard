@@ -67,7 +67,7 @@
                                 <rect key="frame" x="312" y="84" width="24" height="24"/>
                                 <state key="normal" image="information"/>
                                 <connections>
-                                    <segue destination="tmC-XA-xbI" kind="show" id="Td0-bO-GJk"/>
+                                    <segue destination="tmC-XA-xbI" kind="show" identifier="infoSegue" id="Td0-bO-GJk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,7 +117,41 @@
                     <view key="view" contentMode="scaleToFill" id="4IA-m9-xWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Wm-FJI">
+                                <rect key="frame" x="30" y="104" width="315" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">QRDiary is a free QR code scanning app that allows users to read QR codes containing text and URL-s, save their scans and share them via messaging apps or social media. 
+
+Developed by Slobodan Kovrlija. 
+
+Special thanks for inspiration and idea to my colleague Ariel Scott-Dicker. 
+
+Additional thanks for technical matters to Vijay Subrahmanian from https://ayeohyes.wordpress.com and Gabriel Theodoropuolos from http://www.appcoda.com.
+
+Icon pictures credits:
+Information icon - Recep Kutuk
+Camera stop icon - Picol 
+Save, scan &amp; diary icons - Freepik</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="top" secondItem="CV2-lC-GpS" secondAttribute="bottom" constant="40" id="KMI-KT-Ivk"/>
+                            <constraint firstAttribute="trailing" secondItem="KPf-Wm-FJI" secondAttribute="trailing" constant="30" id="MXf-Pu-1tv"/>
+                            <constraint firstItem="MNy-GV-iO0" firstAttribute="top" secondItem="KPf-Wm-FJI" secondAttribute="bottom" constant="40" id="dnP-qc-kDE"/>
+                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="leading" secondItem="4IA-m9-xWG" secondAttribute="leading" constant="30" id="ifV-2a-Knr"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
