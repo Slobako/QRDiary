@@ -32,6 +32,11 @@
     self.infoTextView.layer.cornerRadius = 10;
 }
 
+//to have the text in text view show from top left
+- (void)viewDidLayoutSubviews {
+    [self.infoTextView setContentOffset:CGPointZero animated:NO];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

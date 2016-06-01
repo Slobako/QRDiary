@@ -44,7 +44,7 @@
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uz-ea-oIl">
                                 <rect key="frame" x="10" y="593" width="64" height="64"/>
@@ -109,7 +109,7 @@
         <!--Info View Controller-->
         <scene sceneID="gfv-mL-4Je">
             <objects>
-                <viewController id="tmC-XA-xbI" customClass="QRDInfoViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tmC-XA-xbI" customClass="QRDInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CV2-lC-GpS"/>
                         <viewControllerLayoutGuide type="bottom" id="MNy-GV-iO0"/>
@@ -118,8 +118,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Wm-FJI">
-                                <rect key="frame" x="30" y="104" width="315" height="523"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Wm-FJI">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -138,10 +138,94 @@ Gabriel Theodoropuolos
 Icon pictures credits:
 Information icon - Recep Kutuk
 Camera stop icon - Picol 
-Save, scan &amp; diary icons - Freepik</string>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Save, scan &amp; diary icons - Freepik">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -151,13 +235,12 @@ Save, scan &amp; diary icons - Freepik</string>
                         </subviews>
                         <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="top" secondItem="CV2-lC-GpS" secondAttribute="bottom" constant="40" id="KMI-KT-Ivk"/>
-                            <constraint firstAttribute="trailing" secondItem="KPf-Wm-FJI" secondAttribute="trailing" constant="30" id="MXf-Pu-1tv"/>
-                            <constraint firstItem="MNy-GV-iO0" firstAttribute="top" secondItem="KPf-Wm-FJI" secondAttribute="bottom" constant="40" id="dnP-qc-kDE"/>
-                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="leading" secondItem="4IA-m9-xWG" secondAttribute="leading" constant="30" id="ifV-2a-Knr"/>
+                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="top" secondItem="CV2-lC-GpS" secondAttribute="bottom" constant="20" id="KMI-KT-Ivk"/>
+                            <constraint firstAttribute="trailing" secondItem="KPf-Wm-FJI" secondAttribute="trailing" constant="20" id="MXf-Pu-1tv"/>
+                            <constraint firstItem="MNy-GV-iO0" firstAttribute="top" secondItem="KPf-Wm-FJI" secondAttribute="bottom" constant="20" id="dnP-qc-kDE"/>
+                            <constraint firstItem="KPf-Wm-FJI" firstAttribute="leading" secondItem="4IA-m9-xWG" secondAttribute="leading" constant="20" id="ifV-2a-Knr"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="infoTextView" destination="KPf-Wm-FJI" id="BCA-SE-vs6"/>
                     </connections>
