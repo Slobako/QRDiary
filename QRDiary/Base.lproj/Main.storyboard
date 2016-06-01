@@ -120,16 +120,20 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Wm-FJI">
                                 <rect key="frame" x="30" y="104" width="315" height="523"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">QRDiary is a free QR code scanning app that allows users to read QR codes containing text and URL-s, save their scans and share them via messaging apps or social media. 
 
-Developed by Slobodan Kovrlija. 
+Developed by Slobodan Kovrlija - https://github.com/Slobako. 
 
-Special thanks for inspiration and idea to my colleague Ariel Scott-Dicker. 
+Special thanks for inspiration to my colleague Ariel Scott-Dicker. 
 
-Additional thanks for technical matters to Vijay Subrahmanian from https://ayeohyes.wordpress.com and Gabriel Theodoropuolos from http://www.appcoda.com.
+Additional thanks for technical matters: 
+Vijay Subrahmanian 
+(https://ayeohyes.wordpress.com) 
+Gabriel Theodoropuolos 
+(http://www.appcoda.com)
 
 Icon pictures credits:
 Information icon - Recep Kutuk
@@ -145,7 +149,7 @@ Save, scan &amp; diary icons - Freepik</string>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88977888770000002" green="1" blue="0.94373121670000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KPf-Wm-FJI" firstAttribute="top" secondItem="CV2-lC-GpS" secondAttribute="bottom" constant="40" id="KMI-KT-Ivk"/>
                             <constraint firstAttribute="trailing" secondItem="KPf-Wm-FJI" secondAttribute="trailing" constant="30" id="MXf-Pu-1tv"/>
@@ -154,6 +158,9 @@ Save, scan &amp; diary icons - Freepik</string>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="infoTextView" destination="KPf-Wm-FJI" id="BCA-SE-vs6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O07-OB-xjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

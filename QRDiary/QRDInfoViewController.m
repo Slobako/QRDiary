@@ -9,6 +9,7 @@
 #import "QRDInfoViewController.h"
 
 @interface QRDInfoViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 
 @end
 
@@ -18,21 +19,22 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:NO];
+    
+    //setting up the Text View look:
+    self.infoTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
+    //add a border frame to TextView
+    self.infoTextView.layer.borderWidth = 8.0;
+    self.infoTextView.layer.borderColor = [[UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0] CGColor];
+    //increase text inset
+    self.infoTextView.textContainerInset = UIEdgeInsetsMake(8.0, 8.0, 8.0, 8.0);
+    //round the edges
+    self.infoTextView.clipsToBounds = YES;
+    self.infoTextView.layer.cornerRadius = 10;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
