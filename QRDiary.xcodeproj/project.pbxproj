@@ -175,7 +175,6 @@
 				E1D23A1C1CE12393003C51AF /* AppDelegate.m */,
 				E1D23A1E1CE12393003C51AF /* ViewController.h */,
 				E1D23A1F1CE12393003C51AF /* ViewController.m */,
-				E1D23A211CE12393003C51AF /* Main.storyboard */,
 				E106715A1CFE5A4500D8412A /* QRDInfoViewController.h */,
 				E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */,
 				E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */,
@@ -184,8 +183,9 @@
 				E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */,
 				E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */,
 				E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */,
-				E1D23A271CE12394003C51AF /* Assets.xcassets */,
+				E1D23A211CE12393003C51AF /* Main.storyboard */,
 				E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */,
+				E1D23A271CE12394003C51AF /* Assets.xcassets */,
 				E1D23A2C1CE12394003C51AF /* Info.plist */,
 				E1D23A241CE12394003C51AF /* QRDiary.xcdatamodeld */,
 				E1D23A181CE12393003C51AF /* Supporting Files */,
@@ -648,7 +648,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -663,7 +663,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
