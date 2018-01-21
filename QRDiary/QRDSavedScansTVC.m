@@ -70,10 +70,13 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        //delete object from Core Data first
+        // Delete object from Core Data first
         QRDScan *scanToDelete = self.dataStore.savedScans[indexPath.row];
         [self.dataStore.managedObjectContext deleteObject:scanToDelete];
         [self.dataStore saveContext];
+        
+        // Refresh array of scans
+        self.scans = self.dataStore.fetchSavedScans;
         
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
