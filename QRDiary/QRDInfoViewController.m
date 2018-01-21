@@ -20,6 +20,11 @@
     
     [self.navigationController setNavigationBarHidden:NO];
     
+    [self setupView];
+}
+
+- (void)setupView {
+    
     //setting up the Text View look:
     self.infoTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
     //add a border frame to TextView
@@ -30,6 +35,13 @@
     //round the edges
     self.infoTextView.clipsToBounds = YES;
     self.infoTextView.layer.cornerRadius = 10;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // This is needed because if left swipe isn't completed, the navbar
+    // disappears because of the setting in the home view controller
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 //to have the text in text view show from top left

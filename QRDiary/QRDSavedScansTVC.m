@@ -36,6 +36,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // This is needed because if left swipe isn't completed, the navbar
+    // disappears because of the setting in the home view controller
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

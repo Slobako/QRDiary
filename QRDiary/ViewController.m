@@ -29,6 +29,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setupView];
+    
+    [self setupScanner];
+    
+    self.dataStore = [QRDCoreDataStore sharedDataStore];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    //to hide nav bar in root view controller
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+-(void)setupView {
+    
     self.scanResultTextView.hidden = YES;
     self.scanResultTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:16.0];
     //add a border frame
@@ -43,16 +58,6 @@
     
     self.cancelScanButton.hidden = YES;
     self.saveButton.hidden = YES;
-    
-    [self setupScanner];
-    
-    self.dataStore = [QRDCoreDataStore sharedDataStore];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    
-    //to hide nav bar in root view controller
-    [self.navigationController setNavigationBarHidden:YES];
 }
 
 -(void)setupScanner {
