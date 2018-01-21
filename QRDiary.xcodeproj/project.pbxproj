@@ -13,7 +13,7 @@
 		E106715C1CFE5A4500D8412A /* QRDInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */; };
 		E1D23A1A1CE12393003C51AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A191CE12393003C51AF /* main.m */; };
 		E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1C1CE12393003C51AF /* AppDelegate.m */; };
-		E1D23A201CE12393003C51AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1F1CE12393003C51AF /* ViewController.m */; };
+		E1D23A201CE12393003C51AF /* QRDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D23A1F1CE12393003C51AF /* QRDHomeViewController.m */; };
 		E1D23A231CE12393003C51AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A211CE12393003C51AF /* Main.storyboard */; };
 		E1D23A281CE12394003C51AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A271CE12394003C51AF /* Assets.xcassets */; };
 		E1D23A2B1CE12394003C51AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */; };
@@ -62,8 +62,8 @@
 		E1D23A191CE12393003C51AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1D23A1B1CE12393003C51AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1D23A1C1CE12393003C51AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1D23A1E1CE12393003C51AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1D23A1F1CE12393003C51AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E1D23A1E1CE12393003C51AF /* QRDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRDHomeViewController.h; sourceTree = "<group>"; };
+		E1D23A1F1CE12393003C51AF /* QRDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRDHomeViewController.m; sourceTree = "<group>"; };
 		E1D23A221CE12393003C51AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1D23A251CE12394003C51AF /* QRDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRDiary.xcdatamodel; sourceTree = "<group>"; };
 		E1D23A271CE12394003C51AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +132,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		453362DA2014793400CDC55E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1D23A1E1CE12393003C51AF /* QRDHomeViewController.h */,
+				E1D23A1F1CE12393003C51AF /* QRDHomeViewController.m */,
+				E106715A1CFE5A4500D8412A /* QRDInfoViewController.h */,
+				E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */,
+				E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */,
+				E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */,
+				E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */,
+				E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		453362DB2014796A00CDC55E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */,
+				E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C25BAADE8682A017562DC614 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +170,6 @@
 		E1D23A0C1CE12393003C51AF = {
 			isa = PBXGroup;
 			children = (
-				E1EDA9ED1CED3F3F0077A62E /* Models */,
 				E1D23A171CE12393003C51AF /* QRDiary */,
 				E1D23A341CE12394003C51AF /* QRDiaryTests */,
 				E1D23A3F1CE12394003C51AF /* QRDiaryUITests */,
@@ -173,16 +196,9 @@
 				E1EDA9FE1CEE720A0077A62E /* QRDCoreDataStore.m */,
 				E1D23A1B1CE12393003C51AF /* AppDelegate.h */,
 				E1D23A1C1CE12393003C51AF /* AppDelegate.m */,
-				E1D23A1E1CE12393003C51AF /* ViewController.h */,
-				E1D23A1F1CE12393003C51AF /* ViewController.m */,
-				E106715A1CFE5A4500D8412A /* QRDInfoViewController.h */,
-				E106715B1CFE5A4500D8412A /* QRDInfoViewController.m */,
-				E1EDAA081CF644C70077A62E /* QRDSavedScanTVCell.h */,
-				E1EDAA091CF644C70077A62E /* QRDSavedScanTVCell.m */,
-				E1EDA9EA1CED2E4B0077A62E /* QRDSavedScansTVC.h */,
-				E1EDA9EB1CED2E4B0077A62E /* QRDSavedScansTVC.m */,
-				E1EDAA021CF3FA680077A62E /* QRDViewScanViewController.h */,
-				E1EDAA031CF3FA680077A62E /* QRDViewScanViewController.m */,
+				E1EDA9ED1CED3F3F0077A62E /* Models */,
+				453362DB2014796A00CDC55E /* Views */,
+				453362DA2014793400CDC55E /* View Controllers */,
 				E1D23A211CE12393003C51AF /* Main.storyboard */,
 				E1D23A291CE12394003C51AF /* LaunchScreen.storyboard */,
 				E1D23A271CE12394003C51AF /* Assets.xcassets */,
@@ -228,6 +244,7 @@
 				E1EDA9F71CED3F860077A62E /* QRDScan.m */,
 			);
 			name = Models;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,7 +512,7 @@
 				E1EDAA011CEFCDD10077A62E /* QRDiary.xcdatamodeld in Sources */,
 				E1EDAA041CF3FA680077A62E /* QRDViewScanViewController.m in Sources */,
 				E1EDA9F81CED3F860077A62E /* QRDScan+CoreDataProperties.m in Sources */,
-				E1D23A201CE12393003C51AF /* ViewController.m in Sources */,
+				E1D23A201CE12393003C51AF /* QRDHomeViewController.m in Sources */,
 				E1D23A1D1CE12393003C51AF /* AppDelegate.m in Sources */,
 				E106715C1CFE5A4500D8412A /* QRDInfoViewController.m in Sources */,
 				E1EDA9FF1CEE720A0077A62E /* QRDCoreDataStore.m in Sources */,

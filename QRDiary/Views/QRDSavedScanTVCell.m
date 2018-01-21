@@ -13,10 +13,7 @@
 
 @end
 
-
 @implementation QRDSavedScanTVCell
-
-
 
 - (void)awakeFromNib {
     [super awakeFromNib];

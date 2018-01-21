@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  QRDHomeViewController.m
 //  QRDiary
 //
 //  Created by Slobodan Kovrlija on 5/9/16.
 //  Copyright © 2016 Slobodan Kovrlija. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "QRDHomeViewController.h"
 #import "QRDSavedScansTVC.h"
 #import "QRDScan.h"
 
-@interface ViewController ()
+@interface QRDHomeViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *videoPreviewView;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
@@ -21,10 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 
-
 @end
 
-@implementation ViewController
+@implementation QRDHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

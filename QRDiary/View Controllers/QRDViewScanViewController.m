@@ -13,13 +13,17 @@
 @property (weak, nonatomic) IBOutlet UIView *detailView;
 @property (weak, nonatomic) IBOutlet UITextView *savedScanTextView;
 
-
 @end
 
 @implementation QRDViewScanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupView];
+}
+
+- (void)setupView {
     
     self.savedScanTextView.text = self.textToDisplay;
     
@@ -43,11 +47,7 @@
     self.savedScanTextView.font = [UIFont fontWithName:@"Helvetica Neue" size:18.0];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+// IBActions
 - (IBAction)returnTapped:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];

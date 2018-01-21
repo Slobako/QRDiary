@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QRDHomeViewController.h
 //  QRDiary
 //
 //  Created by Slobodan Kovrlija on 5/9/16.
@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "QRDCoreDataStore.h"
 
-@interface ViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+@interface QRDHomeViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, strong)AVCaptureSession *captureSession;
 @property (nonatomic, strong)AVCaptureVideoPreviewLayer *captureVideoLayer;
