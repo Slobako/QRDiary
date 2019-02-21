@@ -322,7 +322,7 @@
 				TargetAttributes = {
 					E1D23A141CE12393003C51AF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AQ88PA37SU;
+						DevelopmentTeam = KD8SM9G8RG;
 					};
 					E1D23A301CE12394003C51AF = {
 						CreatedOnToolsVersion = 7.3;
@@ -663,6 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KD8SM9G8RG;
 				INFOPLIST_FILE = QRDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary2;
@@ -678,6 +679,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KD8SM9G8RG;
 				INFOPLIST_FILE = QRDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slobodankovrlija.qrdiary2;

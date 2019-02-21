@@ -27,6 +27,14 @@
     self.dataStore = [QRDCoreDataStore sharedDataStore];
     
     self.scans = self.dataStore.fetchSavedScans;
+    if (self.scans.count == 0) {
+        CGFloat xOrigin = (self.view.layer.frame.size.width / 2) - 100;
+        UILabel *noScansLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOrigin, 100, 200, 30)];
+        noScansLabel.text = @"Your diary is empty ☹️";
+        noScansLabel.textAlignment = NSTextAlignmentCenter;
+        noScansLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:18.0];
+        [self.view addSubview:noScansLabel];
+    }
     
     self.tableView.backgroundColor = [UIColor colorWithRed:0.2 green:0.53 blue:0.78 alpha:1.0];
 }
